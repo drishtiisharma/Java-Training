@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Person{
+class Person1{
 	String name;
 	String address;
 	void getData() {
@@ -17,10 +17,11 @@ class Person{
 	}
 }
 
-class Employee extends Person{
+class Employee1 extends Person1{
 	int empid;
 	double salary;
 	void getData1() {
+		super.getData();
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter employee id: ");
 		empid=sc.nextInt();
@@ -29,15 +30,17 @@ class Employee extends Person{
 		
 	}
 	void showData1() {
+		super.showData();
 		System.out.println("employee id: "+empid);
 		System.out.println("employee salary: "+salary);
 	}
 }
 
-class Student extends Person{
+class Student1 extends Person1{
 	int rollno;
 	double percentage;
 	void getData2() {
+		super.getData();
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter student rollno: ");
 		rollno=sc.nextInt();
@@ -46,15 +49,17 @@ class Student extends Person{
 
 	}
 	void showData2() {
+		super.showData();
 		System.out.println("student roll no: "+rollno);
 		System.out.println("student percentage: "+percentage);
 	}
 }
 
-class Manager extends Employee{
+class Manager1 extends Employee1{
 	int mgrid;
 	String dept;
 	void getData3() {
+		super.getData1();
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter manager id: ");
 		mgrid=sc.nextInt();
@@ -63,40 +68,33 @@ class Manager extends Employee{
 
 	}
 	void showData3() {
+		super.showData1();
 		System.out.println("manager id: "+mgrid);
 		System.out.println("manager department: "+dept);
 	}
 }
 
-public class PersonClass {
+public class MethodOverriding {
 
 	public static void main(String[] args) {
-		Employee e=new Employee();
+		Employee1 e=new Employee1();
 		System.out.println("employee details:");
 		System.out.println();
-		e.getData();
 		e.getData1();
-		e.showData();
 		e.showData1();
 		System.out.println();
 		
-		Student s=new Student();
+		Student1 s=new Student1();
 		System.out.println("student details:");
 		System.out.println();
-		s.getData();
 		s.getData2();
-		s.showData();
 		s.showData2();
 		System.out.println();
 		
-		Manager m=new Manager();
+		Manager1 m=new Manager1();
 		System.out.println("manager details:");
 		System.out.println();
-		m.getData();
-		m.getData1();
 		m.getData3();
-		m.showData();
-		m.showData1();
 		m.showData3();
 		
 
