@@ -1,0 +1,93 @@
+constructors: are used to intialize the objects. there are two types of constructors:
+1. default/automatic constructor:
+it is the factory of objects, provided by java for each such class that doesnt contain, any user defined constructor.
+**provided automatically by java's API(library)
+**no garbage value in java, by default its always 0.
+**no parameters in default constructor
+Q. can we create default constructors manually?
+
+2. user defined/paramertized constructor
+it is,just like a method/ special type of method of class but constructor and method has some differences...
+1) constructor name must always be the same as the class name, methods cannot have the same name as the class name
+2) constructors cannot return any value, methods have to even if no return type, ie void.
+3)constructors are called automatically when we create any object of class, while methods have to be called manually.
+
+$ what happens when object is created,what initializes the object- constructor is called(type depends on the parameters passed)
+
+
+
+
+##no 2 constructors can have the same parameters, ie same name but not same parameters!
+#constructors are always known by their arguments
+#instance variable(jiski copy object me jayegi) and local variable(created inside a block,copy not created inside object)
+inside a block, local variable gets the preference over global/instance variable
+#when local and instance variable name is same- "this" is used.
+#no two same methods with same prototype in the same class
+
+
+method overloading: when we create more than 1 method with similar name and return type different in parameter list, class allows these methods and this technique is known as method overloading.
+
+
+static members of java:
+there are 3 static members of java:
+1)static data member: it doesnt instantiate for object of class. it has only a single copy in memory, shared by objects of class.
+**try with normal(id-count problem)
+2)static member method: it can use only static members of class in its body.
+it can also be called by using class name, without object.
+3)static block: it is a self-executable block of code, it will execute automatically when program control come inside the class, first time, where it was declared.
+
+##only self executable things in java- static block and main method, but only once
+
+##instance block creates the object->allocates memory
+
+sequence of program execution:
+static block
+instance block
+constructor
+method
+
+
+inheritance: basically 5 types of inheritance:
+1)single inheritance
+super class/ base class
+|
+v
+sub class/ derived
+
+2) multi level
+class1
+|
+v
+class2
+|
+v
+class3
+ 
+3) multiple
+class1     class2
+         \     /
+        class3
+**note: java doesnt allow multiple inheritance by using classes
+
+4) hierarchical
+	class1
+	/       \
+            class2    class3
+
+5)hybrid
+combination of more than 1 type like hierarchical+multilevel+single
+
+
+HW:
+*multilevel*multiple
+
+##TO BE NOTED IN COPY:
+name and balance
+not to be taken as input:
+accno to be generated automatically like 1,2,3... as we make objects
+
+
+method overriding: when we create more than 1 method with similar prototype in a class,then class will not allow these methods, but if a sub class contains more than 1 method with similar protoype in which 1 method comes from super class by inheritance and other is developed by subclass itself. then sub class allows these methods and this technique is known as, method overriding.
+**correct methodoverriding problem
+super keyword:
+super is a keyword which represents the name of the super class inside sub class
