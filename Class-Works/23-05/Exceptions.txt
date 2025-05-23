@@ -1,0 +1,64 @@
+
+Exception Handling : 
+
+Error : in the case of error programm will not execute.
+
+Exception : in the case of exception running programm will terminate unexpectedly.
+
+
+Type Of Exceptions:
+
+1)Compile time exception: Physical or syntactical Mistack.
+
+2)Runtime exception : a = 234/0;
+
+-ArithmeticException / by zero
+-ArrayIndexOutOfBoundsException 
+-NullPointerExeption
+-FileNotFoundException
+-IOException
+-NotSerializableExeption
+-SQLException
+
+3)Logical Exception : Unexpected outputs
+
+Java Exception : 
+
+1)Checked Exception
+
+2)UnChecked Exception
+
+Exception Hednling : 
+1)Stop Program Termination
+2)Stop showing error msg to the user.
+3)Show user understandable msg .
+
+
+Exception Hednling techniques: 
+1)try-catch
+2)multiple catch blocak
+3)universal catch block
+4)finally
+5)throw
+6)throws
+
+
+Three Important class of java : 
+
+1)Class class : it is the super class of all java classes.
+
+2)Object class : it is the super clsss of all java Objects.
+
+3)Exception class : it is the super class of all exception classes.
+
+
+
+
+
+
+
+
+
+
+
+
