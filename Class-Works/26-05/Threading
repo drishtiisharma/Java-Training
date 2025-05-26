@@ -1,0 +1,48 @@
+
+Multi Threading : 
+1)Creating Threads
+	-By extending "Thread" class.
+	-By implementing "Runnable" Interface
+	
+	public void 	run()
+	{
+	Code For Threads.
+	}
+
+2)Managing Threads
+	-Thread Priority
+					(default)
+	1<------------------------5------------------------>10
+MIN_PRIORITY		NORM_PRIORITY	MAX_PRIORITY
+	
+	t1.setPriority(Thread.NORM_PRIORITY+2);
+	t1.setPriority(7);
+	int x = t1.getPriority();
+	
+	t1.setName(" ");
+	String s = 	t1.getName();
+	
+	Thread t = Thread.currentThread();
+	
+	-Thread Synchronization
+		->Synchronized block
+		->Synchronized method
+		
+	-Inter-Thread Communication
+		->wait()
+		->notify()
+		
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
