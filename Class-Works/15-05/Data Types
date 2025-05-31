@@ -1,0 +1,146 @@
+
+
+JDK : Java Devlopment Kit
+
+JRE : Java Runtime Environment
+
+JVM : Java Virtual Machine(Interperter of Java)
+
+API : Application Programming Interface(Library)
+
+
+JDK	 :  API + Compiler + JVM
+
+
+JRE  : API + JVM
+
+
+
+
+Data Types : 
+1)Primitive
+	-byte
+	-short
+	-int
+	-long
+	-float
+	-double
+	-char
+	-boolean
+2)Non-Primitive
+	-Array
+	-Class
+	-Interface
+	
+Primitive :
+	-Integer
+	123, -250,	
+	
+	-FLoating Point
+	3.14, -5.43 
+	
+	-Character
+	'a','A','@','$'
+	
+	-Boolean
+	true, false
+	
+
+Integer : 	
+
+keyword			memory			range
+-byte				1 byte				-128, 0 ,+127	
+
+-short				2 bytes				-32768,0 , + 32767
+
+-int					4 bytes				-/+ 10 digits 
+
+-long				8 bytes				-/+19 digits
+
+
+Floating Point : 
+-float				4 bytes				-/+10 digits
+
+-double				8 bytes 			-/+ 19 digits
+
+Note : all floating poin constants are double type by defalut.
+
+c/c++ 
+float f = 1.5; ok
+		float
+
+Java : 
+float f = 1.5; error
+		double
+
+
+float f = 1.5f;ok
+float f = (float)1.5;  ok
+double f = 1.65;
+
+
+Character : 
+-char				2 bytes				0, 65535
+
+Character Code : Uni Code 
+0, 255 English 
+
+C/C++ : ASCII Code -128, 0, + 127
+
+65 = A
+66 = B
+.
+.
+90 = Z
+
+97 = a
+98 = b
+.
+.
+122 = z
+
+
+Java : Character Code : Uni Code
+
+Boolean : 
+boolean 			1 byte				true/false 
+
+
+boolean b = true;
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+

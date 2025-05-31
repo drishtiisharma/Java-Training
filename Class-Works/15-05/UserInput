@@ -1,0 +1,23 @@
+
+User Input : 
+Scanner class : it is used to get input from user.
+
+import java.util.Scanner;
+
+Scanner s = new Scanner(System.in);
+
+s.nextByte();
+s.nextShort();
+s.nextInt();
+s.nextLong();
+s.nextDouble();
+s.next(); input single word string
+s.nextLine(); input more then one word string
+
+
+
+
+
+
+
+

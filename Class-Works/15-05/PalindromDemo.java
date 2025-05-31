@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class RevDemo
+class PalindromDemo
 {
 public static void main(String args[])
 {
@@ -14,8 +14,15 @@ for(i=n; i>0; i=i/10)
 	r = r*10;
 	r = r+(i%10);
 }
+if(r==n)
+{
+System.out.println(n+" is a palindrom no");
+}
+else
+{
+System.out.println(n+" is not a palindrom no");
+}
 
-System.out.println("Rev = "+r);
 }
 }
 

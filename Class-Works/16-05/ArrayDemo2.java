@@ -1,23 +1,12 @@
-import java.util.Scanner;
-
-class ArrayDemo2{
-public static void main(String[] args){
-Scanner sc=new Scanner(System.in);
-int n;
-
-System.out.println("enter the size of array: ");
-n=sc.nextInt();
-int arr[]=new int[n];
-
-System.out.println("enter array elements:");
-for(int i=0;i<=n-1;i++){
-arr[i]=sc.nextInt();
+class ArrayDemo2
+{
+public static void main(String args[])
+{
+int a[]={5,10,15,20,25,30,35,40,45,50};
+int i;
+for(i=0; i<=9; i++)
+{
+System.out.println("a["+i+"]="+a[i]);
 }
-
-System.out.println("array elements are:");
-for(int i=n-1;i>=0;i--){
-System.out.println(arr[i]);
-}
-
 }
 }

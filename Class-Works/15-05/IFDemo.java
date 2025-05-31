@@ -1,16 +1,23 @@
 import java.util.Scanner;
-class ForDemo2
+
+class IFDemo
 {
 public static void main(String args[])
 {
-int i,n;
+int n;
 Scanner s = new Scanner(System.in);
-System.out.println("Enter limit :");
+System.out.println("Enter a value:");
 n = s.nextInt();
 
-for(i=1; i<=n; i++)
+if(n<100)
 {
-System.out.println("i ="+i); 	
+System.out.println(n+" is less than 100");
+}
+
 }
 }
-}
+
+
+
+
+

@@ -1,24 +1,25 @@
 import java.util.Scanner;
 
-class RevDemo
+class IfElseDemo
 {
 public static void main(String args[])
 {
-int n,r=0,i;
+int n;
 Scanner s = new Scanner(System.in);
 System.out.println("Enter a value:");
 n = s.nextInt();
 
-for(i=n; i>0; i=i/10)
+if(n<100)
 {
-	r = r*10;
-	r = r+(i%10);
+System.out.println(n+" is less than 100");
+}
+else
+{
+System.out.println(n+" is not less than 100");
 }
 
-System.out.println("Rev = "+r);
 }
 }
-
 
 
 
