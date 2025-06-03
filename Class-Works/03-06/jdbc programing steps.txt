@@ -1,0 +1,92 @@
+JDBC Programming Steps : 
+1)Create DataBase In MySQL
+2)Create JDBC Program In Java
+
+Step 1: Activate JDBC Drivers
+try
+{
+Class.forName("com.mysql.cj.jdbc.Driver");
+Class.forName("oracle.jdbc.driver.OracleDriver");
+}
+catch(ClassNotFoundException e)
+{
+}
+
+Step 2:Get Connection
+
+Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ips25java?user=root&password=root");
+						or
+Connection con = 
+DriverManager.getConnection("jdbc:mysql://localhost:3306/ips25java","root","root");
+
+Step 3 : Create SQL Query
+
+-static query
+	Statement stmt = con.createStatement();
+	
+-dynamic query
+PreparedStatement ps = con.prepareStatement("SQL Query");
+
+Step 4 :Execute SQL Query
+
+DDL, DML :
+stmt.executeUpdate("SQL Query");
+ps.executeUpdate();
+
+DQL : 
+stmt.executeQuery("SQL Query");
+ps.executeQuery();
+
+Step 5 : Close All Connection
+con.close();
+ps.close();
+stmt.close();
+
+
+
+Type Of JDBC Drivers:
+JDBC drivers are client-side adapters (installed on the client machine, not on the server) that convert requests from Java programs to a protocol that the RDBMS can understand. There are 4 types of JDBC drivers:
+
+Type-1 driver or JDBC-ODBC bridge driver(MS Access)
+Type-2 driver or Native-API driver(MySQL/Oracle Old Drivers)
+Type-3 driver or Network Protocol driver
+Type-4 driver or Thin driver
+
+Type-1 driver
+
+Type-1 driver or JDBC-ODBC bridge driver uses ODBC driver to connect to the database. The JDBC-ODBC bridge driver converts JDBC method calls into the ODBC function calls. Type-1 driver is also called Universal driver because it can be used to connect to any of the databases.
+
+As a common driver is used in order to interact with different databases, the data transferred through this driver is not so secured.
+The ODBC bridge driver is needed to be installed in individual client machines.
+Type-1 driver isn’t written in java, that’s why it isn’t a portable driver.
+This driver software is built-in with JDK so no need to install separately.
+It is a database independent driver.
+Type-2 driver
+
+The Native API driver uses the client -side libraries of the database. This driver converts JDBC method calls into native calls of the database API. In order to interact with different database, this driver needs their local API, that’s why data transfer is much more secure as compared to type-1 driver.
+
+Driver needs to be installed separately in individual client machines
+The Vendor client library needs to be installed on client machine.
+Type-2 driver isn’t written in java, that’s why it isn’t a portable driver
+It is a database dependent driver.
+Type-3 driver
+
+The Network Protocol driver uses middleware (application server) that converts JDBC calls directly or indirectly into the vendor-specific database protocol. Here all the database connectivity drivers are present in a single server, hence no need of individual client-side installation.
+
+Type-3 drivers are fully written in Java, hence they are portable drivers.
+No client side library is required because of application server that can perform many tasks like auditing, load balancing, logging etc.
+Network support is required on client machine.
+Maintenance of Network Protocol driver becomes costly because it requires database-specific coding to be done in the middle tier.
+Switch facility to switch over from one database to another database.
+Type-4 driver
+
+Type-4 driver is also called native protocol driver. This driver interact directly with database. It does not require any native database library, that is why it is also known as Thin Driver.
+
+Does not require any native library and Middleware server, so no client-side or server-side installation.
+It is fully written in Java language, hence they are portable drivers.
+Which Driver to use When?
+
+If you are accessing one type of database, such as Oracle, Sybase, or IBM, the preferred driver type is type-4.
+If your Java application is accessing multiple types of databases at the same time, type 3 is the preferred driver.
+Type 2 drivers are useful in situations, where a type 3 or type 4 driver is not available yet for your database.
+The type 1 driver is not considered a deployment-level driver, and is typically used for development and testing purposes only.
