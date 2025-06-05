@@ -1,0 +1,24 @@
+body{
+    background-color: rgba(243, 0, 194, 0.242)
+}
+h1{
+
+    background-color: blue;
+    color: azure;
+    border: dashed;
+    border-color: black;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    background-color: aqua;
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: solid;
+    border-color: brown;
+}
+input{
+    background-color: black;
+    color: white;
+}
