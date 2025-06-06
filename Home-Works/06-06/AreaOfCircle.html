@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Area of Circle Calculator</title>
+        <script>
+            function calcAr(){
+                var r= parseFloat(document.getElementById("t1").value);
+                var area=3.14*r*r;
+                document.getElementById("t2").value= area;
+
+            }
+            function reset(){
+                document.getElementById("t1").value="";
+                document.getElementById("t2").value="";
+            }
+        </script>
+    </head>
+
+
+    <body style="background-color: lightcoral;">
+        <center>
+            <h2>Area of Circle</h2><br>
+        <table width="500" cellpadding="10">
+            <tr>
+                <td>Enter radius of the circle</td>
+                <td><input type="text" id="t1"></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="calcAr()">Calculate Area</button></td>
+                <td><button onclick="reset()">Reset</button></td>
+            </tr>
+
+            <tr>
+                <td>Result</td>
+                <td> <input type="text" id="t2"></td>
+            </tr>
+
+        </table>
+        </center>
+    </body>
+</html>

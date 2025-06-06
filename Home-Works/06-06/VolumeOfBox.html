@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Volume of Box</title>
+        <script>
+            function calAr(){
+                var l=parseFloat(document.getElementById("t1").value);
+                var b=parseFloat(document.getElementById("t2").value);
+                var h=parseFloat(document.getElementById("t3").value);
+                var area=l*b*h;
+                document.getElementById("t4").value=area;
+            } 
+            function reset(){
+                document.getElementById("t1").value="";
+                document.getElementById("t2").value="";
+                document.getElementById("t3").value="";
+                document.getElementById("t4").value="";
+                
+            }
+
+
+        </script>
+    </head>
+    
+    <body style="background-color: cadetblue;"">
+        <center>
+        <h2>Volume of Box</h2>
+        <table width="500" cellpadding="10px">
+            <tr>
+                <td>Enter length</td>
+                <td><input type="text" id="t1"></td>
+            </tr>
+
+            <tr>
+                <td>Enter breadth</td>
+                <td><input type="text" id="t2"></td>
+            </tr>
+
+            <tr>
+                <td>Enter height</td>
+                <td><input type="text" id="t3"></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="calAr()">Calculate Area of Box</button></td>
+                <td><button onclick="reset()">Reset</button></td>
+            </tr>
+
+            <tr>
+                <td>Result</td>
+                <td><input type="text" id="t4"></td>
+            </tr>
+        </table>
+        </center>
+    </body>
+</html>
