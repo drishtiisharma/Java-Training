@@ -1,0 +1,64 @@
+<html>
+<head>
+<script Language="JavaScript">
+function checklen(aForm)
+{
+ if(aForm.password.value != "")
+{
+if(aForm.password.value.length<8 ||aForm.password.value.length>16)
+    {
+alert("Password must be greater then or equal to 8 char or <=16.");        
+        aForm.password.focus();
+        return false;
+    }
+}
+
+
+ if(aForm.pincode.value != "")
+{
+ 
+if(isNaN(aForm.pincode.value)==true)
+    {
+        alert("Pincode must be numeric.");        
+        aForm.pincode.focus();
+        return false;
+    }
+}
+
+
+}
+</script>
+
+
+</head>
+
+<body bgColor="#FFFF99">
+
+
+
+<p>New User Sign up:</p>
+<form name="newuser" method="post" action="NewUserSubmit.jsp">
+  <label></label>
+  <table width="470" border="1">
+    <tr>
+      <td>Password</td>
+      <td><input type="password" name="password" id="password" onBlur="checklen(this.form)"></td>
+    </tr>
+    
+    <tr>
+      <td height="23">Pin Code</td>
+      <td><input type="text" name="pincode" id="pincode" onBlur="checklen(this.form)"></td>
+    </tr>
+    <tr>
+      <td height="23">&nbsp;</td>
+      <td><input type="submit" name="submit" id="submit" value="Submit" onClick="return validate(this.form)"></td>
+    </tr>
+  </table>
+  <p>
+    <label for="password"></label>
+  </p>
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+<script>
+function add()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseInt(document.getElementById("t2").value);
+var c = a+b;
+//document.write("Sum = "+c);
+document.getElementById("t3").value = c;
+}
+function sub()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseInt(document.getElementById("t2").value);
+var c = a-b;
+//document.write("Sum = "+c);
+document.getElementById("t3").value = c;
+}
+function multi()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseInt(document.getElementById("t2").value);
+var c = a*b;
+//document.write("Sum = "+c);
+document.getElementById("t3").value = c;
+}
+function div()
+{
+var a = parseInt(document.getElementById("t1").value);
+var b = parseInt(document.getElementById("t2").value);
+var c = a/b;
+//document.write("Sum = "+c);
+document.getElementById("t3").value = c;
+}
+</script>
+</head>
+<body>
+<center>
+<h1>Universal College Calculator</h1>
+<br><br><br>
+<hr color="blue">
+<br><br><br>
+Number 1<input type="text" id="t1"><br><br>
+Number 2<input type="text" id="t2"> <br><br>
+Result<input type="text" id="t3"><br><br>
+<input type="submit" value="Add" onclick="add()">
+<input type="submit" value="Sub" onclick="sub()">
+<input type="submit" value="Multi" onclick="multi()">
+<input type="submit" value="Div" onclick="div()">
+<br><br><br>
+<hr color="red">
+<br><br><br><br>
+<address>
+Universal Institute<br>
+Bhawarkua,<br>
+Indore.
+</address>
+</center>
+</body>
+</html>
