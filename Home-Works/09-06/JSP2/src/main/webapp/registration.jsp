@@ -11,9 +11,9 @@
 <center>
 <h1>IPS Academy</h1>
 <p style="font-size:20px">Institute of Engineering & Science, Indore(MP)
-<h2><b><i>Knowledge,Skills and Values</i></b></h2></p>
-<br><hr><br>
 <h3>New User Registration</h3>
+<br><hr><br>
+
 <br>
 <%
 String msg=(String)request.getAttribute("msg");
@@ -23,10 +23,24 @@ if(msg!=null){
 
 %>
 <form action="savenewuser.jsp" method="post">
-Computer Code <input type="number" name="compcode"><br>
-Password <input type="password" name="password"><br>
-<input type="submit" value="Register">
-<a href="login.jsp">Go back to Login Page</a>
+<table width="500" cellpadding="10">
+
+<tr>
+<td>Computer Code</td>
+<td> <input type="number" name="compcode"><br><br></td>
+</tr>
+
+<tr>
+<td>Password</td> 
+<td><input type="password" name="password"><br><br></td>
+</tr>
+
+<tr>
+<td><input type="submit" value="Log In"></td>
+
+<td><a href="login.jsp">Go back to Login Page</a></td>
+</tr>
+</table>
 </form>
 
 <br><br><hr>

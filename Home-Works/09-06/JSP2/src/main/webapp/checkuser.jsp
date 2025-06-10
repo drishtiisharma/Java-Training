@@ -39,8 +39,8 @@ try{
 	}
 }
 catch(SQLException s){
-	request.setAttribute("msg", "user could not be registered");
-	out.println("user could not be registered");
+	request.setAttribute("msg", "No such User Registered");
+//	out.println("user could not be registered");
 
 }
 %>
