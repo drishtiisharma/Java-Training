@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Saving New User</title>
 </head>
 <body>
 <%
@@ -33,10 +33,11 @@ try{
 	PreparedStatement ps=con.prepareStatement("insert into employee values(?,?,?,?,?,?)");
 	ps.setInt(1, Integer.parseInt(empid));
 	ps.setString(2, empname);
-	ps.setDouble(3, Double.parseDouble(salary));
-	ps.setString(4, designation);
-	ps.setString(5, department);
-	ps.setString(6, password);
+	ps.setString(3, password);
+	ps.setDouble(4, Double.parseDouble(salary));
+	ps.setString(5, designation);
+	ps.setString(6, department);
+
 	
 	int x=ps.executeUpdate();
 	if(x>0){

@@ -42,10 +42,11 @@ try{
 		PreparedStatement ps= con.prepareStatement("insert into employee values(?,?,?,?,?,?)");
 		ps.setInt(1, Integer.parseInt(empid));
 		ps.setString(2, empname);
-		ps.setDouble(3, salary);
-		ps.setString(4, designation);
-		ps.setString(5, department);
-		ps.setString(6, password);
+		ps.setString(3, password);
+		ps.setDouble(4, salary);
+		ps.setString(5, designation);
+		ps.setString(6, department);
+		
 		int x=ps.executeUpdate();
 		if(x>0){
 			request.setAttribute("msg", "New Record Added Successfully!");
@@ -56,12 +57,12 @@ try{
 	}
 	
 	if(op.equals("Update Employee")){
-		PreparedStatement ps= con.prepareStatement("update employee set empname=?, salary=?, designation=?, department=?, password=? where empid=?");
+		PreparedStatement ps= con.prepareStatement("update employee set empname=?, password=?, salary=?, designation=?, department=?, where empid=?");
 		ps.setString(1, empname);
-		ps.setDouble(2, salary);
-		ps.setString(3, designation);
-		ps.setString(4, department);
-		ps.setString(5, password);
+		ps.setString(2, password);
+		ps.setDouble(3, salary);
+		ps.setString(4, designation);
+		ps.setString(5, department);
 		ps.setInt(6, Integer.parseInt(empid));
 		int x=ps.executeUpdate();
 		if(x>0){
@@ -87,6 +88,7 @@ try{
 }
 catch(SQLException s){
 	request.setAttribute("msg", "No such User Registered");
+	s.printStackTrace();
 
 
 }
