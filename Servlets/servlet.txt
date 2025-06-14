@@ -1,0 +1,275 @@
+Web Applications follows 3-tier architecture.
+
+3-tier architecture
+
+  client              server            database
+  
+   HTML               SERVLETS
+   CSS                JSP
+   JS                 Spring
+   ANGULAR            STRUCTS
+                      EJB
+   
+  Client side         Server Side
+  Technologies        Technologies
+
+
+Servlets introduction
+=====================
+ a. Servlets are used to write the programming at server side.
+ b. Servlet is a obejct executed at server side.
+ c. Jakarta Servlet(formerly Java Servlet)(jakarta EE 4.0.3)
+
+ Servlet Documentation : https://docs.oracle.com/javaee/5/tutorial/doc/bnafe.html
+
+ So to run the servlet we need a server.
+
+
+    Differnet servers                           Vendors
+        Tomcat          ----------->   Apache software foundation
+		Weblogic        ----------->         Oracle
+		Websphere       ----------->          IBM
+		Jboss           ----------->          Red Hat
+		galssfish       ----------->        sun micro systems (oracle)
+ 
+  
+
+ Note:
+ =====
+  Corejava applications are executed by   :         JVM (java virtual machine) 
+  Oracle quires are executed  by          :         DBE (Databse engine) 
+  Servlets are executed by                :             Servers   
+  
+
+  There are two types of servers 
+  a. web servers
+  b. Application server 
+
+  a. web servers : supports only web applications
+                   web server contains web contianer.
+
+       web container = servlet container + jsp engine
+                         servlet engine     jasper
+                         catalina 
+      
+	   servlet container will execute the servlets 
+       JSP engine will execte JSP
+
+ex: IIS(Internet Information Services) from microsoft , tomcat 4.0, Jetty ...
+
+b. Application server : supports web application & enterprise application(large-scale software)
+                                                   (Load balancing,trasaction mgmt,security etc).
+
+		Application server contains web container & EJB container
+		
+		web container : it supports web appliations 
+		EJB container : it suports Enterprise applciaton
+
+ ex: tomcat , weblogic , glassfish , websphere,jboss....
+
+
+To Know present version of servlets
+===================================
+https://en.wikipedia.org/wiki/Jakarta_Servlet
+
+Servlets predefined pacakges
+javax.servlet              This package will handle the normal request & response                            
+javax.servlet.http         This package will handle thel http request & response
+javax.servlet.annotaion    This package will handle the annoations.
+
+
+javax.servlet
+============
+This package provides the number of interfaces and classes to support Generic
+servlet which is protocol independent.
+
+javax.servlet.http
+==================
+This package provides the number of interfaces and classes to support 
+HTTP servlet which is HTTP protocol dependent.
+
+
+refer servlethistory.png
+
+
+============================================================================================
+
+ To execute the servlets we need server. 
+
+ Download & install the server: tomcat (google tomcat 9 download)
+ download link:  https://tomcat.apache.org/download-90.cgi
+  
+   zip (pgp, sha512)
+   tar.gz (pgp, sha512)
+   32-bit Windows zip (pgp, sha512)
+   64-bit Windows zip (pgp, sha512)
+   32-bit/64-bit Windows Service Installer (pgp, sha512) [Download this file]
+
+
+   Double click on the installer , installation will start
+
+   Click on next
+   Click on IAgree
+   Select  FULL  and Click on next
+   Change port number to any four digit number(9999) ,Because oracle is running at port 
+    number 8080 by default.
+
+   Give user name & password :
+      User name : tomcat
+	  Password  : tomcat
+
+  Click on next
+  Click on next
+  Click on Install
+  Uncheck  both the check boxes and Click on Finish
+
+
+ 
+once installation completed the folder location is ,
+
+C:\Program Files\Apache Software Foundation\Tomcat 9.0
+
+
+Tomcat contians total 7-folders,
+1. bin : 
+  it contains binary executables to start & stop the server.
+  start the server using tomcat service. (double click "tomcat9.exe" )
+  Once the server started by using client send the request using below url.
+       http://localhost:9999/
+
+
+================================================================================================
+  Click on "Tomcat Setup"  under "Developer Quick Start"  to  see documentation.
+
+  Click on "1)introduction" and go to "Directories and Files" , you can see below text 
+
+  These are some of the key tomcat directories:
+
+/bin - Startup, shutdown, and other scripts. The *.sh files (for Unix systems) are functional 
+                    duplicates of the *.bat files (for Windows systems). Since the Win32 
+					command-line lacks certain functionality, there are some additional files in here.
+/conf - Configuration files and related DTDs. The most important file in here is server.xml. 
+          It is the main configuration file for the container.
+/logs - Log files are here by default.
+/webapps - This is where your webapps go.
+
+================================================================================================
+whatever applications you deployed in the server those all deployed applications are there 
+in the "Manager App".
+
+when you click on "Manager App" , it will ask for use name and password(tomcat and tomcat).
+
+under "/examples" you can see some example programs.
+
+whatever applications you deployed in the server those all deployed applications are there 
+in the "Manager App". if you want you can deploy manually by clicking on "deploy" button , which you
+can see by scrolling down little bit.
+
+
+2. config : config  folder contains configuration details .
+
+server.xml: this file contians port numbers information, to change the port number use this file
+
+<Connector port="9999" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+
+tomcat-user.xml : this file contains username & password to change the username & password use this file
+
+context.xml: to configure the connection pool information use this file.
+            
+
+
+3. temp: it will store the temp files
+
+4. log :
+  it will store the log information
+  when the server starts (time)
+  when server stops (time)
+  error information ( time)
+
+5. web apps : web application
+This folder contians all web application deployed in server.
+
+6. work :
+every jsp will be converted into servlet format, the converted servlets are stored in work folder.
+
+7. lib: this folder contains jar files 
+
+the servlet predefined classes & interfaces are present in jar file
+servlet-api.jar.(servlet-api.jar is main jar , all other jars are dependent jars)
+for jsps we have jsp-api.jar
+
+
+Servlets :
+==========
+		Servlet api is given by sun micro System 
+		API contians more interfaces & less classes
+		The servlet implementations are given by server vendors
+		tomcat ---> servlet-api.jar 
+		glassfish ---> jee.jar
+
+
+		We are developing the servlet project : Tomcat server : servlet-api.jar
+
+     Later we decided to change the server, in this case no need to change the code just 
+	 chnage the server implementations jar file.
+
+
+========================================================================================================
+
+CGI(Common Gateway Interface) vs  servlets
+===========================================
+Before servlets we have CGI
+
+Servlets are server side components that provides a powerful mechanism for 
+developing server web applications for server side. Earlier CGI was developed 
+to provide server side capabilities to the web applications. 
+
+Although CGI played a major role in the explosion of the Internet, its performance, 
+scalability and reusability issues make it less than optimal solutions. 
+
+Java Servlets changes all that.
+
+Built from ground up using Sun’s write once run anywhere technology java servlets
+provide excellent framework for server side processing.
+
+
+refer cgi11.png
+refer cgi12.png
+
+In CGI for every request  , it will create a separate process.
+As the no.of requests are increasing , no.of processes will also increase , 
+it will increase the processor load .
+
+Threads are light weight , where as process is heavy weight.
+
+
+To overcome this problem for every request instead of creating the processes ,  
+create a thread.
+
+So processor load is decreased , so performance will be improved.
+
+
+refer servletvsjsp.png
+
+1. CGI request processing vs. Servlets request processing
+=========================================================
+CGI : For every request one process is created. 
+Servlets: For every request one thread is created.
+
+Technology (j2ee)        framework
+-----------------        --------
+Servlets          ---->    structs
+JSP               ---->     JSF
+
+Servlet and jsp are technologies which are part of j2ee
+structs framework is built on the top of servlets
+and JSF framework is built on the top of JSP
+  
+  Framework provides more pre-defined support when compared to the technologies.(less code more work)
+  Framework will reduce the length of the code.
+
+
+
+

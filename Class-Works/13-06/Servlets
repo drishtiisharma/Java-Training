@@ -1,0 +1,78 @@
+
+
+Servlet : 
+
+Servlet-->Http--->HttpServlet
+Servlet-->GenericServlet
+
+Servlet Life Cycle : 
+
+1)init()
+2)service()
+3)destroy()
+
+public/protected void init(HttpServletRequest request,
+HttpServletResponse response)throws ServletException,IOException
+		{
+		
+		}
+
+
+Method Calling : 
+1)
+init(request,response)
+{
+}
+
+2)
+service(request,response)
+{
+doService(request,response);
+}
+
+doService(request,response)
+{
+doGet(request,response);
+}
+
+doGet(request,response)
+{
+Servlet Code
+or
+doPost(request,response);
+}
+
+doPost(request,response)
+{
+Servlet Code
+}
+
+3)
+destroy(request,response)
+{
+
+}
+
+
+doGet():
+-url visible in address bar
+-not secure
+-can forward only 256kb data with request and response 
+
+doPost():
+-url not visible in address bar
+-secure
+-No Limit for sending  data with request and response 
+
+
+http://localhost:8081/ips8/HelloServlet?t1=
+
+http://localhost:8081/ips8/HelloServlet?t1=Kal+Test+Ho+Sakta+He+Agar+40+%2B+student+class+me+ate+he+to.+Nahi+to+Kal+Servlet+Pura+Pada+Diya+Jayega.
+
+
+
+
+
+
+
+
