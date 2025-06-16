@@ -1,0 +1,6 @@
+Servlet execution process includes 4 steps:
+
+1. request is sent from web client to server
+2. request is sent from server to servlet
+3. request is processed and the response is sent to the webserver
+4. webserver forwards this response to the web client
