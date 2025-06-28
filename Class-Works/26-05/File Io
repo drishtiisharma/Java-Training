@@ -1,0 +1,36 @@
+
+FILE I/O : 
+
+Stream Classes : 
+
+OutputStream				InputStream				
+
+1)Object I/O(Serialization/Deserialization)
+
+FileOutputStream			FileInputStream
+
+ObjectOutputStream		ObjectInputStream
+writeObject(obj);			readObject();
+
+Typesd Of Stream:
+
+1)Byte Streaming
+	-FileOutputStream
+	-FileInputStream
+	
+	
+2)Character Streaming
+	-FileWriter
+	-FileReader
+
+
+
+
+
+
+
+
+
+
+
+

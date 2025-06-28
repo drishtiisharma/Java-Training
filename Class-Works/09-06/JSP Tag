@@ -1,0 +1,51 @@
+
+
+1) JSP : HTML Program +  Java Code
+	
+2)Servlet : Java Program + HTML
+
+
+JSP Tags : 
+
+1)Scripting Tags : 
+	-scriplet
+		<% Java Code %>
+		
+	-Expression 
+		<%= Valid Java Expression %>
+		
+	-declaration
+		<%! method / var declaration %>
+		
+
+2)Directive Tag
+		-Page Directive 
+		<%@page import="" %>
+		<%@page language="" %>
+		<%@page contentType="" %>
+		<%@page pageEncoding="" %>		
+		
+
+3)JSP Action Tag : 
+		
+		<jsp:action attribute="value" />
+
+
+
+A list of the 9 implicit objects is given below:
+Object				Type
+
+out					PrintWriter
+request				HttpServletRequest
+response			HttpServletResponse
+session				HttpSession
+config				ServletConfig
+application			ServletContext
+pageContext		PageContext
+page				Object
+exception			Throwable
+
+
+
+
+	

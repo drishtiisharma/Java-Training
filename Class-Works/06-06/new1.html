@@ -1,0 +1,58 @@
+<html>
+<head>
+<script Language="JavaScript">
+function validate(aForm)
+{
+if((aForm.userid.value) == "")
+    {
+        alert("Please enter userid.");        
+        aForm.userid.focus();
+        return false;
+    }
+    if((aForm.password.value) == "")
+    {
+        alert("Please enter password.");        
+        aForm.password.focus();
+        return false;
+    }
+
+    return true;
+}
+</script>
+</head>
+<body bgColor="#FFFF99">
+<p>New User Sign up:</p>
+<form>
+  <label></label>
+  <table  width="470" >
+    <tr>
+      <td width="109">User ID</td>
+      <td width="345">
+   <input type="text" name="userid" id="userid">
+   </td>
+    </tr>
+    <tr>
+      <td>Password</td>
+         <td>
+<input type="password" name="password" id="password">
+	</td>
+    </tr>
+        <tr>
+      <td height="23">&nbsp;</td>
+      <td>
+      <input type="submit" name="submit" id="submit" value="Submit" onClick="return validate(this.form)"></td>
+    </tr>
+
+  </table>
+  <p>
+    <label for="password"></label>
+  </p>
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
+
+
+
+

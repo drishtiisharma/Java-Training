@@ -1,0 +1,235 @@
+<html>
+<head>
+<script Language="JavaScript">
+function validate(aForm)
+{
+if((aForm.userid.value) == "")
+    {
+        alert("Please enter userid.");        
+        aForm.userid.focus();
+        return false;
+    }
+    if((aForm.password.value) == "")
+    {
+        alert("Please enter password.");        
+        aForm.password.focus();
+        return false;
+    }
+if((aForm.username.value) == "")
+    {
+        alert("Please enter fullname.");        
+        aForm.username.focus();
+        return false;
+    }
+    if((aForm.panno.value) == "")
+    {
+        alert("Please enter panno.");        
+        aForm.panno.focus();
+        return false;
+    }
+    if((aForm.emailid.value) == "")
+    {
+        alert("Please enter emailid.");        
+        aForm.emailid.focus();
+        return false;
+    }
+    if((aForm.contactno.value) == "")
+    {
+        alert("Please enter contactno.");        
+        aForm.contactno.focus();
+        return false;
+    }
+if((aForm.addr.value) == "")
+    {
+        alert("Please enter address.");        
+        aForm.addr.focus();
+        return false;
+    }
+    if((aForm.city.value) == "")
+    {
+        alert("Please enter city.");        
+        aForm.city.focus();
+        return false;
+    }
+    if((aForm.state.value) == "")
+    {
+        alert("Please enter state.");        
+        aForm.state.focus();
+        return false;
+    }
+    if((aForm.pincode.value) == "")
+    {
+        alert("Please enter pincode.");        
+        aForm.pincode.focus();
+        return false;
+    }
+    if((aForm.acctno.value) == "")
+    {
+        alert("Please enter account no.");        
+        aForm.acctno.focus();
+        return false;
+    }
+    if((aForm.branchname.value) == "")
+    {
+        alert("Please enter branchname.");        
+        aForm.branchname.focus();
+        return false;
+    }
+
+    return true;
+}
+
+function checkformat(aForm)
+{
+if(aForm.emailid.value != "")
+    {
+       pass = aForm.emailid.value.indexOf('@',0);
+       pass1 = aForm.emailid.value.indexOf('.',0);
+            if(pass==-1||pass1==-1)
+             {
+alert("Please enter emailid (Format = a@b.c).");        
+        aForm.emailid.focus();
+        return false;
+ 		   }
+           pass1 = aForm.emailid.value.indexOf('.',pass);
+               //document.write("Idex of @ : "+pass);
+            if(pass1== -1)
+             {
+alert("Please enter emailid (Format = a@b.c).");        
+        aForm.emailid.focus();
+        return false;
+ 		   }
+    }
+}
+function checklen(aForm)
+{
+ if(aForm.password.value != "")
+{
+if(aForm.password.value.length<8)
+    {
+alert("Password must be greater then or equal to 8 char.");        
+        aForm.password.focus();
+        return false;
+    }
+}
+
+
+ if(aForm.pincode.value != "")
+{
+ 
+if(isNaN(aForm.pincode.value)==true)
+    {
+        alert("Pincode must be numeric.");        
+        aForm.pincode.focus();
+        return false;
+    }
+}
+}
+</script>
+
+
+</head>
+
+<body bgColor="#FFFF99">
+
+
+
+<p>New User Sign up:</p>
+<form name="newuser" method="post" action="NewUserSubmit.jsp">
+  <label></label>
+  <table width="470" border="1">
+    <tr>
+      <td width="109">User ID<font color="red">*</font></td>
+      <td width="345">
+      <input type="text" name="userid" id="userid">
+      </td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td>
+      <input type="password" name="password" id="password" onBlur="checklen(this.form)" required></td>
+    </tr>
+    
+    <tr>
+      <td height="23">PAN No.</td>
+      <td><input type="text" name="panno" id="panno"></td>
+    </tr>
+    <tr>
+      <td height="23">Email ID</td>
+      <td><input name="emailid" type="text" id="emailid" size="37" onBlur="checkformat(this.form)"></td>
+    </tr>
+    <tr>
+      <td height="23">DOB</td>
+      <td><select name="day">
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <select name="month">	
+          <option value="1">January</option>
+          <option value="2">February</option>
+        </select>
+        <select name="year" id="year">
+          <option value="2002" selected>2002</option>
+          <option value="2001">2001</option>
+          <option value="2001">2001</option>
+          <option value="2001">2001</option>
+          <option value="2001">2001</option>
+                </select> </td>
+    </tr>
+    <tr>
+      <td height="23">Gender</td>
+      <td><select name="gender" id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        </select>      </td>
+    </tr>
+    <tr>
+      <td height="23">Contact No</td>
+      <td><input type="text" name="contactno" id="contactno"></td>
+    </tr>
+    <tr>
+      <td height="23">Address</td>
+      <td><textarea name="addr" cols="36" rows="3" id="addr"></textarea></td>
+    </tr>
+    <tr>
+      <td height="23">City</td>
+      <td><input type="text" name="city" id="city"></td>
+    </tr>
+    <tr>
+      <td height="23">State</td>
+      <td><input type="text" name="state" id="state" ></td>
+    </tr>
+    <tr>
+      <td height="23">Pin Code</td>
+      <td><input type="text" name="pincode" id="pincode" onBlur="checklen(this.form)"></td>
+    </tr>
+<tr>
+      <td height="23">Bank name</td>
+      <td><select name="bankname" id="bankname">
+        <option value="ICICI">ICICI</option>
+        <option value="UTI">UTI</option>
+        <option value="HSBC">HSBC</option>
+        </select> </td>
+    </tr>
+<tr>
+      <td height="23">Account no</td>
+      <td><input type="text" name="acctno" id="acctno""></td>
+    </tr>
+<tr>
+      <td height="23">Branch name</td>
+      <td><input type="text" name="branchname" id="branchname" onBlur="checklen(this.form)"></td>
+    </tr>
+    <tr>
+      <td height="23">&nbsp;</td>
+      <td>
+      <input type="submit" name="submit" id="submit" value="Submit" onClick="return validate(this.form)"></td>
+    </tr>
+  </table>
+  <p>
+    <label for="password"></label>
+  </p>
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

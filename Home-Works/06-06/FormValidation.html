@@ -1,0 +1,206 @@
+<html>
+<head>
+    <title>Sign Up Form</title>
+    <script>
+        function validate(aForm){
+        
+            if(aForm.user.value.trim() == ""){ //trim()- removes trailing spaces
+                alert("Please set a username!");
+                aForm.user.focus();
+                return false;
+            }
+            if(aForm.emailid.value.trim() == ""){
+                alert("Please mention an Email-ID!");
+                aForm.emailid.focus();
+                return false;
+            }
+            if(aForm.pno.value.trim() == ""){
+                alert("Please set a Phone Number!");
+                aForm.pno.focus();
+                return false;
+            }
+            if(aForm.pass.value.trim() == ""){
+                alert("Please set a Password!");
+                aForm.pass.focus();
+                return false;
+            }
+            if(aForm.gender.value == ""){
+                alert("Please select your Gender!");
+                aForm.gender.focus();
+                return false;
+            }
+            if(aForm.add.value.trim() == ""){
+                alert("Please specify your Address!");
+                aForm.add.focus();
+                return false;
+            }
+            
+           
+            if(!checkuser()){
+                aForm.user.focus();
+                return false;
+            }
+            if(!checkformat(aForm)){
+                aForm.emailid.focus();
+                return false;
+            }
+            if(!checkpno()){
+                aForm.pno.focus();
+                return false;
+            }
+            if(!checklen(aForm)){
+                aForm.pass.focus();
+                return false;
+            }
+            
+            return true;  
+        }
+
+        function checkformat(aForm){
+            var email = aForm.emailid.value;
+            if(email != ""){
+                var atPos = email.indexOf('@');
+                var dotPos = email.lastIndexOf('.');
+                if(atPos < 1 || dotPos < atPos + 2 || dotPos + 2 >= email.length){
+                    alert("Please enter your Email-ID in a valid format!");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function checklen(aForm){
+            var pass = aForm.pass.value;
+            if(pass != ""){
+                if(pass.length < 8 || pass.length > 16){
+                    alert("Password should be of 8-16 characters!");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function checkuser(){
+            var usern = document.getElementById("user").value;
+            if(!/^[a-z]/.test(usern)){ //test()- matches if "usern" matches this pattern
+                alert("Username must start with a lowercase character!");
+                return false;
+            }
+            return true;
+        }
+
+        function reset(){
+            document.getElementById("user").value = "";
+            document.getElementById("pass").value = "";
+            document.getElementById("pno").value = "";
+            document.getElementById("emailid").value = "";
+            document.getElementById("add").value = "";
+            document.getElementById("gender").value = "";
+        }
+
+        function checkpno(){
+            var p = document.getElementById("pno").value;
+            var v = /^[0-9]{10}$/;
+            if(!v.test(p)){
+                alert("Phone Number should be exactly 10 digits (0-9)!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body style="background-color: rgb(175, 145, 235);">
+    <center>
+        <h2>Sign Up</h2>
+        <form name="newuser" method="post" action="NewUserSubmit.jsp" onsubmit="return validate(this)">
+            <table width="500" cellpadding="10">
+
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" id="user" name="user" onblur="checkuser()"></td>
+                </tr>
+
+                <tr>
+                    <td>Email ID</td>
+                    <td><input type="email" id="emailid" name="emailid"></td>
+                </tr>
+
+                <tr>
+                    <td>Phone Number</td>
+                    <td><input type="number" id="pno" name="pno"></td>
+                </tr>
+
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" id="pass" name="pass"></td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <select name="gender" id="gender">
+                            <option value="">--Select--</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>DOB</td>
+                    <td>
+                        <select name="day">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                        </select>
+                        <select name="month">
+                            <option>Jan</option>
+                            <option>Feb</option>
+                            <option>Mar</option>
+                            <option>Apr</option>
+                            <option>May</option>
+                            <option>Jun</option>
+                            <option>Jul</option>
+                            <option>Aug</option>
+                            <option>Sep</option>
+                            <option>Oct</option>
+                            <option>Nov</option>
+                            <option>Dec</option>
+                        </select>
+                        <select name="year">
+                            <option>2025</option>
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+                            <option>2017</option>
+                            <option>2016</option>
+                            <option>2015</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Address</td>
+                    <td><textarea id="add" name="add" cols="26" rows="4"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                    <td><button type="button" onclick="reset()">Reset</button></td>
+                </tr>
+
+            </table>
+        </form>
+    </center>
+</body>
+</html>

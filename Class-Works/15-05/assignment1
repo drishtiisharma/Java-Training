@@ -1,0 +1,14 @@
+1)Find greatest value in between two values.
+2)Find a given year is a leap year or not.
+3)Find greatest value in between three values.
+4)Find greatest value in between four values.
+5)Book staller
+book<20 5 per disc
+book<50 10 per disc
+book<100 15 per disc
+book>=100 20 per disc
+get input no of books and price of one book.
+show total payble amount after discount.
+
+
+

@@ -1,0 +1,37 @@
+1. create table student (
+  rollno int primary key,
+  name varchar(20),
+  pmarks int,
+  cmarks int,
+  mmarks int
+);
+
+
+2. alter table student
+add total int
+add per numeric(4,2),
+add divi varchar(10);
+
+3. insert into student values
+(101, 'ankit', 56, 54, 66),
+(102, 'radhe', 75, 65, 47),
+(103, 'riddhi', 12, 10, 3),
+(104, 'siddhi', 52, 65, 35),
+(105, 'rohit', 20, 15, 10),
+(106, 'satish', 98, 87, 98),
+(107, 'abhinav', 13, 9, 8),
+(108, 'vaibhavi', 12, 10, 11),
+(109, 'krishna', 99, 98, 99),
+(110, 'varun', 54, 67, 55);
+
+4. update student
+settotal = pmarks + cmarks + mmarks,
+per = round((pmarks + cmarks + mmarks) * 100 / 300, 2);
+
+5. update student set divi = case when per >= 60 then 'FIRST' when per >= 45 then 'SECOND' when per >= 33 then 'THIRD' else 'FAIL' END;
+
+6. delete from student where per < 33;
+
+
+
+

@@ -1,0 +1,9 @@
+syntax:
+
+
+function ftrname(parameter list)
+{
+statement....
+return (optional);
+}
+

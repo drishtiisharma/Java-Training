@@ -1,0 +1,36 @@
+
+RDBMS Softwares: 
+-MS-Access
+-MySql
+-SQL Server
+-Oracle
+-SyBase
+-Mongo DB
+-Big-Data Hadoop
+
+SQL : 
+SQL Sub Query Languages : 
+
+1)DDL :  Data Definition Language
+	create database, create table, drop table, drop databas,
+	alter table,rename
+	
+2)DML : Data manipulation Language
+	insert, update, delete
+	
+3)DQL : Data Query Language
+	select, where, relation op,logical op, in, betweeb, like
+
+4)DCL : Data Control language
+
+5)TCL : Transaction Control Language
+	commit, roolback, terminate
+
+
+
+
+
+
+
+
+

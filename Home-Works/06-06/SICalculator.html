@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>SI Calculator</title>
+        <script>
+            function simInt(){
+                var p=parseFloat(document.getElementById("t1").value);
+                var r=parseFloat(document.getElementById("t2").value);
+                var t=parseFloat(document.getElementById("t3").value);
+                var area=(p*r*t)/100;
+                document.getElementById("t4").value=area;
+            }
+
+            function reset(){
+                document.getElementById("t1").value="";
+                document.getElementById("t2").value="";
+                document.getElementById("t3").value="";
+                document.getElementById("t4").value="";
+
+            }
+
+
+
+
+        </script>
+
+
+    </head>
+
+    <body style="background-color: cornflowerblue;">
+        <center>
+            <h2>Simple Interest Calculator</h2>
+        <table width="500" cellpadding="10">
+            <tr>
+                <td>Enter Principle</td>
+                <td><input type="text" id="t1"></td>
+            </tr>
+
+             <tr>
+                <td>Enter Rate</td>
+                <td><input type="text" id="t2"></td>
+            </tr>
+
+             <tr>
+                <td>Enter Time</td>
+                <td><input type="text" id="t3"></td>
+            </tr>
+
+             <tr>
+                <td><button onclick="simInt()">Calculate Simple Interest</button></td>
+                <td><button onclick="reset()">Reset</button></td>
+            </tr>
+
+             <tr>
+                <td>Result</td>
+                <td><input type="text" id="t4"></td>
+            </tr>
+
+
+        </table>
+        </center>
+    </body>
+
+
+
+
+</html>

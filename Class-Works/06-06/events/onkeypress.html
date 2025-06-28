@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>A function is triggered when the user is pressing a key in the input field.</p>
+
+<input type="text" onkeypress="myFunction(this)">
+
+<script>
+function myFunction(x) 
+{
+x.value = x.value.toUpperCase();
+if(x.value=="A")
+{
+//document.write(x.value);
+alert("You pressed A key inside the input field");
+}
+}
+</script>
+
+</body>
+</html>

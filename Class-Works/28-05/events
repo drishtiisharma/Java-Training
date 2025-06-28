@@ -1,0 +1,48 @@
+
+
+Event Handling : 
+Event : 
+
+EventSourceClass		EventClass			EventHandler
+
+Button(c)				ActionEvent(c)		ActionListener(I)
+
+
+					actionPerformed(ActionEvent e)
+					{
+					Code of Buttons.
+					}
+		
+			Event Deligation Model Of Buttons
+		
+		
+		
+JCheckBox		:
+
+EventSourceClass		EventClass			EventHandler
+
+JCheckBox(c)			ItemEvent(c)		ItemListener(I)
+
+
+					itemStateChanged(ItemEvent e)
+					{
+					Code of Checkbox.
+					}
+		
+			Event Deligation Model Of JCheckBox
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+

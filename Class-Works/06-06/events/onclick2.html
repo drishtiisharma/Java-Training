@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript HTML Events</h2>
+<p>Click the button to display the date.</p>
+<button onclick="displayDate(this)">The time is1?</button>
+<button id="btn" onclick="displayDate(document.getElementById('btn'))">The time is2?</button>
+<script>
+function displayDate(abc) 
+{
+document.getElementById("demo").innerHTML = Date()+"::ppp";
+abc.innerHTML = Date();
+}
+</script>
+
+<p id="demo"></p>
+</body>
+</html> 

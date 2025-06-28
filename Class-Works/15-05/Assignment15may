@@ -1,0 +1,172 @@
+1)Find Sum Of 1 to 10 nos.
+2)Find fectorial of n.
+n = 5;
+5*4*3*2*1 = 120
+3)Print only even nos from 1 to n.
+4)Print only odd nos from 1 to n.
+5)Find Sum of fectors of 1 from 1 to n.
+6)Count no of digits of n.
+7)Sum of digits of n.
+8)Find reverce of digits of n;
+9)Find  m^n.
+10)Find a given no is a prime no or not.
+n = 123
+n = 321
+
+11)Find a given no is a palindrom no or no.
+-->121<--
+
+12)Find a given no is an armstrong no or not.
+
+
+Nested For Loop : 
+1)
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+2)
+5 4 3 2 1
+5 4 3 2 1
+5 4 3 2 1
+5 4 3 2 1
+5 4 3 2 1
+3)
+1 1 1 1 1
+1 1 1 1 1
+1 1 1 1 1
+1 1 1 1 1
+4)
+1 1 1 1 1
+2 2 2 2 2
+3 3 3 3 3
+4 4 4 4 4
+5 5 5 5 5
+5)
+5 5 5 5 5
+4 4 4 4 4
+3 3 3 3 3 
+2 2 2 2 2
+1 1 1 1 1
+
+6)
+1 
+11 
+111
+1111
+11111
+
+7)
+11111
+1111
+111
+11
+1
+8)
+1
+12
+123
+1234
+12345
+9)
+12345
+1234
+123
+12
+1
+
+10)
+1
+22
+333
+4444
+55555
+
+11)
+55555
+4444
+333
+22
+1
+
+12)
+5
+54
+543
+5432
+54321
+
+13)
+54321
+5432
+543
+54
+5
+
+
+14)
+*
+**
+***
+****
+*****
+
+
+15)
+     *
+    **
+   ***
+  ****
+ *****
+ 
+ 16)
+     *
+    * *
+   * * *
+  * * * *
+ * * * * *
+ 
+ 17)
+ * * * * *
+  * * * *
+   * * * 
+    * *
+     *
+     
+18)print only prime nos from 1 to n.
+19)pring only armstrong nos from 1 to n.
+20)print tables from m to n.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

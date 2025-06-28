@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Swapping Numbers</title>
+        <script>
+            function swap(){
+                var a=parseInt(document.getElementById("t1").value);
+                var b=parseInt(document.getElementById("t2").value);
+                var temp=a;
+                a=b;
+                b=temp;
+                document.getElementById("t1").value=a;
+                document.getElementById("t2").value=b;
+            }
+            
+            function reset(){
+                document.getElementById("t1").value="";
+                document.getElementById("t2").value="";
+            }
+        </script>
+    </head>
+
+
+
+    <body style="background-color: rgb(110, 130, 76);">
+        <center>
+            <h2>Swapping Numbers</h2>
+            <table width="500" cellpadding="10">
+
+                <tr>
+                    <td>Enter 1st Number</td>
+                    <td><input type="text" id="t1"></td>
+                </tr>
+
+                <tr>
+                    <td>Enter 2nd Number</td>
+                    <td><input type="text" id="t2"></td>
+                </tr>
+
+                <tr>
+                    <td><button onclick="swap()">Swap Numbers</button></td>
+                    <td><button onclick="reset()">Reset</button></td>
+                </tr>
+
+                <!-- <tr>
+                    <td>Result</td>
+                    <td><input type="text" id="t3"></td>
+                </tr> -->
+
+
+
+
+
+            </table>
+        </center>
+    </body>
+</html>

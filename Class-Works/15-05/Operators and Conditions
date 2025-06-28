@@ -1,0 +1,108 @@
+
+Operators : 
+
+1)Arithmetic
++, -, *, /, %, ++, --
+2)Assignement
+=
+a = 10;
+
+3)Arithmetic Assignement
++=, -=, *=, /=, %=
+a = 10
+b = 20;
+
+a = a+b;
+a +=b;
+
+
+a = a-b;
+a -=b;
+
+a = a*b;
+a *=b;
+
+a = a/b;
+a /=b;
+
+a = a%b;
+a %=b;
+
+
+4)Relational
+<, >, <=, >=, ==, !=
+
+a=10;
+b=20;
+
+a>b
+
+
+5)Bit Wise
+&, |, !, ~,  <<, >>
+
+
+
+
+
+
+
+6)Logical
+&&, ||, !
+
+7)Ternary Conditional Op
+
+(Condition ? true : false)
+
+8)Membership Op
+., :, ->, ::
+
+
+
+Control Statements : 
+
+1)Conditiona Statements
+	-if
+	-if-else
+	-nested if-else
+	
+2)Iterative Statements
+	-Loops
+		a)for
+		b)while
+		c)do-while
+		d)for-each 
+		
+3)Jummping Statements
+	-break
+	-continue
+	-switch-case
+
+
+
+1)Conditiona Statements
+	-if
+	syntax : 
+	if(condition)
+	{
+	statements...;
+	}
+	
+	-if-else
+	syntax : 
+	if(condition)
+	{
+	statements...; true section
+	}
+	else
+	{
+	statements...; false section
+	}
+	
+	-nested if-else
+
+
+
+
+
+
