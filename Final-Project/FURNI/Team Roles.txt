@@ -1,0 +1,9 @@
+Admin Panel (entirely):- Piyush and Pragyey
+
+Customer Panel (entirely):- Drishti, Aaliyah, Anuradha
+
+- Drishti:- my profile, edit profile
+- Aaliyah:- cart, order
+- Anuradha:- login & registration, shop home page
+
+Report - Pradumn & Aastha
